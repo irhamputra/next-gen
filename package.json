@@ -60,8 +60,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn posttest",
-      "pre-push": "yarn test"
+      "pre-commit": "yarn test && yarn posttest"
     }
   }
 }
