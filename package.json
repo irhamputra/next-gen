@@ -1,10 +1,10 @@
 {
-  "name": "next-generator",
+  "name": "next-gen",
   "description": "The Next.js Command Generator",
-  "version": "0.0.0",
+  "version": "0.0.1-rc",
   "author": "Muhamad Irham Prasetyo",
   "bin": {
-    "next-generator": "./bin/run"
+    "next-gen": "./bin/run"
   },
   "bugs": "https://github.com/irhamputra/next-generator/issues",
   "dependencies": {
