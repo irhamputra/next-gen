@@ -6,3 +6,8 @@
 /package-lock.json
 /tmp
 node_modules
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/next-generator.iml
+/.idea/vcs.xml
