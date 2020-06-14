@@ -10,7 +10,7 @@ export const promptTheQuestion = async (args: any) => {
       type: 'input',
       name: 'fileName',
       message: 'What is the name of your file:',
-      default: 'index.js',
+      default: 'index',
     });
   }
 
