@@ -1,22 +1,28 @@
 {
-  "name": "next-generator",
+  "name": "next-gen",
   "description": "The Next.js Command Generator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Muhamad Irham Prasetyo",
   "bin": {
-    "next-generator": "./bin/run"
+    "next-gen": "./bin/run"
   },
   "bugs": "https://github.com/irhamputra/next-generator/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
+    "chalk": "^4.1.0",
+    "inquirer": "^7.1.0",
+    "listr": "^0.14.3",
     "tslib": "^1"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
     "@oclif/test": "^1",
     "@types/chai": "^4",
+    "@types/chalk": "^2.2.0",
+    "@types/inquirer": "^6.5.0",
+    "@types/listr": "^0.14.2",
     "@types/mocha": "^5",
     "@types/node": "^10",
     "chai": "^4",

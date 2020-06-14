@@ -15,11 +15,11 @@ The Next.js Command Generator for Creating page and APIs file
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g next-generator
+$ npm install -g next-gen
 $ next-generator COMMAND
 running command...
 $ next-generator (-v|--version|version)
-next-generator/0.0.0 darwin-x64 node-v13.10.1
+next-gen/0.0.1 darwin-x64 node-v13.10.1
 $ next-generator --help [COMMAND]
 USAGE
   $ next-generator COMMAND
