@@ -1,4 +1,4 @@
-next-gen
+[WIP] next-gen
 ==============
 
 The Next.js Command Generator for Creating page and APIs file
