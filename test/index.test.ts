@@ -1,8 +1,8 @@
 import { expect, test } from '@oclif/test';
 
-import cmd = require('../src')
+import cmd = require('../src');
 
-describe('next-generator', () => {
+xdescribe('next-generator', () => {
   test
   .stdout()
   .do(() => cmd.run([]))
@@ -12,8 +12,8 @@ describe('next-generator', () => {
 
   test
   .stdout()
-  .do(() => cmd.run(['--name', 'jeff']))
-  .it('runs hello --name jeff', ctx => {
+  .do(() => cmd.run(['g p', 'jeff']))
+  .it('runs --generate', ctx => {
     expect(ctx.stdout).to.contain('hello jeff');
   });
 });

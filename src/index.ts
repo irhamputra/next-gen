@@ -1,6 +1,6 @@
 import { Command, flags } from '@oclif/command';
-import { createFile } from './utils/createFile';
-import { promptTheQuestion } from './utils/promptTheQuestion';
+import { createFile } from './utils/create-file';
+import { promptTheQuestion } from './utils/prompt-the-question';
 import { Args } from './utils/typings';
 
 class NextGenerator extends Command {
