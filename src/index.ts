@@ -1,31 +1,57 @@
 import { Command, flags } from '@oclif/command';
+import { createFile } from './utils/createFile';
+import { promptTheQuestion } from './utils/promptTheQuestion';
+import { Args } from './utils/typings';
 
 class NextGenerator extends Command {
   static description =
     'Next.js Generator for creating page and APIs file into your project';
 
   static flags = {
-    // add --version flag to show CLI version
     version: flags.version({ char: 'v' }),
     help: flags.help({ char: 'h' }),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({ char: 'n', description: 'name to print' }),
-    // flag with no value (-f, --force)
-    force: flags.boolean({ char: 'f' }),
+    path: flags.string({
+      description: 'create file to specific path in your project',
+      default: './pages',
+    }),
   };
 
-  static args = [{ name: 'file' }];
+  static args: Args[] = [
+    { name: 'generate', options: ['g'] },
+    { name: 'create', options: ['p', 'a'] },
+    { name: 'fileName' },
+  ];
 
   static usage = ['g p yourPage.js [Option]', '--help'];
 
   async run() {
     const { args, flags } = this.parse(NextGenerator);
 
-    const name = flags.name ?? 'world';
-    this.log(`hello ${name} from ./src/index.ts`);
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`);
+    if (!args.generate && !args.create) {
+      this.error('You may skip the generate and create command', { exit: 1 });
+      this.exit(1);
     }
+
+    if (!args.generate) {
+      this.error('You may skip the generate command, try: next-gen g ', {
+        exit: 1,
+      });
+      this.exit(1);
+    }
+
+    if (!args.create) {
+      this.error('You may skipped the create command, try: next-gen g p', {
+        exit: 1,
+      });
+      this.exit(1);
+    }
+
+    // if args is not available, then prompting
+    if (!args.fileName) {
+      return createFile(await promptTheQuestion(args), flags);
+    }
+
+    await createFile(args, flags);
   }
 }
 
